@@ -4,7 +4,7 @@ email:
 description: >-
   Analytics engineering, BI architecture, and data modeling notes.
 url: "https://rvchamb.github.io"
-baseurl: ""
+baseurl:  "/citizenstats.github.io"
 repository: "rvchamb/citizenstats.github.io"
 twitter_username:
 github_username: rvchamb
