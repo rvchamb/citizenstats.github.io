@@ -1,9 +1,67 @@
 ---
-layout: home
-author_profile: true
+layout: single
+author_profile: false
 title: "CitizenStats"
+permalink: /
+classes: wide
 ---
 
-CitizenStats explores analytics engineering, BI architecture, semantic modeling, and decision-ready reporting.
+<section class="cs-hero">
+  <p class="cs-kicker">A public analytics lab</p>
+  <h1>Public data, modeled carefully and explained clearly.</h1>
+  <p class="cs-lead">CitizenStats is where I test practical approaches to analytics engineering, semantic modeling, validation, and decision-ready reporting—using public questions that deserve better evidence.</p>
+  <div class="cs-actions">
+    <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">Explore the projects</a>
+    <a class="btn btn--inverse" href="{{ '/methods/' | relative_url }}">See how the work is done</a>
+  </div>
+</section>
 
-The site combines technical implementation notes, public data projects, analytics methods, and practical AI-assisted workflows.
+<section class="cs-section">
+  <div class="cs-section-heading">
+    <p class="cs-kicker">Current work</p>
+    <h2>Projects built to be inspected</h2>
+    <p>Each project connects the public-facing analysis to its sources, transformations, definitions, tests, and limitations.</p>
+  </div>
+
+  <div class="cs-grid">
+    <article class="cs-card cs-card--featured">
+      <span class="cs-status">In progress</span>
+      <h3><a href="{{ '/projects/chapter-70/' | relative_url }}">Massachusetts Chapter 70 school finance</a></h3>
+      <p>Tracing how state education aid, foundation budgets, required local contributions, and fiscal capacity vary across districts and over time.</p>
+      <p class="cs-meta">DESE · dbt · Neon/Postgres · Power BI</p>
+    </article>
+
+    <article class="cs-card">
+      <span class="cs-status cs-status--planned">Planned</span>
+      <h3><a href="{{ '/projects/college-athletics-finance/' | relative_url }}">College athletics finance</a></h3>
+      <p>A reproducible look at institutional resources, athletic spending, revenue, and competitive context.</p>
+      <p class="cs-meta">Public finance data · dbt · BI</p>
+    </article>
+
+    <article class="cs-card">
+      <span class="cs-status cs-status--research">R&amp;D</span>
+      <h3><a href="{{ '/projects/semantic-layer/' | relative_url }}">A portable semantic layer</a></h3>
+      <p>Testing whether governed metrics can travel from dbt and Postgres into Power BI, Tableau, third-party BI, and AI without being redefined.</p>
+      <p class="cs-meta">Metric contracts · validation · portability</p>
+    </article>
+  </div>
+</section>
+
+<section class="cs-band">
+  <div>
+    <p class="cs-kicker">The architecture</p>
+    <h2>One governed analytical foundation. Multiple ways to use it.</h2>
+  </div>
+  <p class="cs-pipeline">Public sources <span>→</span> dbt <span>→</span> Neon/Postgres <span>→</span> semantic layer <span>→</span> Power BI, Tableau &amp; AI</p>
+</section>
+
+<section class="cs-section cs-two-col">
+  <div>
+    <p class="cs-kicker">Why CitizenStats</p>
+    <h2>Analytics is more than producing a chart.</h2>
+  </div>
+  <div>
+    <p>The useful work happens upstream: defining the question, understanding the grain, resolving conflicting definitions, testing the transformations, and separating evidence from interpretation.</p>
+    <p>CitizenStats makes that judgment visible. <a href="{{ '/about/' | relative_url }}">Learn more about the lab and RIGG Strategy.</a></p>
+  </div>
+</section>
