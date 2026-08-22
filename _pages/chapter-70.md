@@ -27,12 +27,12 @@ The project begins with three connected questions:
 
 ## Current analytical foundation
 
-The current canonical model combines two Massachusetts Department of Elementary and Secondary Education inputs:
+The current canonical model uses two longitudinal extracts assembled from the `dataMultiChart` supporting worksheet in DESE’s [Chapter 70 Trends in Aid and Local Contribution workbook](https://www.doe.mass.edu/finance/chapter70/keyfactors.xlsx):
 
-- District-level Chapter 70 aid and foundation-budget data
-- District wealth and required-local-contribution data
+- [District aid extract]({{ '/assets/data/chapter70/districtaid.csv' | relative_url }}) — the district-aid field block: foundation enrollment, foundation budget, required local contribution, target aid percentage, Chapter 70 aid, foundation-aid increment, and required net school spending
+- [District wealth extract]({{ '/assets/data/chapter70/districtwealth.csv' | relative_url }}) — the wealth/contribution field block: property valuation, income, combined effort yield, foundation budget, target and required local contributions, and enrollment
 
-The files are transformed through dbt staging models and joined at **district × fiscal year**. The resulting mart includes source amounts, per-foundation-pupil measures, funding shares, reconciliation differences, and data-coverage flags.
+DESE publishes the underlying information, but the workbook’s supporting-sheet structure is not a straightforward comparison-ready dataset. CitizenStats reshapes these two blocks into documented CSV extracts for reproducible longitudinal analysis. The files are transformed through dbt staging models and joined at **district × fiscal year**. The resulting mart includes source amounts, per-foundation-pupil measures, funding shares, reconciliation differences, and data-coverage flags.
 
 <div class="cs-band cs-band--inline">
   <p class="cs-pipeline">DESE files <span>→</span> dbt staging <span>→</span> canonical CH70 mart <span>→</span> Neon/Postgres <span>→</span> semantic layer <span>→</span> BI</p>
@@ -68,9 +68,27 @@ Before findings are published, the project will document and execute:
 
 The Power BI report currently explores total Chapter 70 aid, aid per pupil, and change over time. These visuals are analytical prototypes—not yet publication-ready findings—until the source inventory, aggregation logic, and statewide reconciliations are complete.
 
-## Reproducibility
+## Source files and reproducibility
 
-The dbt models are maintained in the private development repository while documentation and validation are strengthened. Public code and reproducibility links will be added before publication.
+The archived source and current comparison extracts are publicly available:
+
+- [Download the archived FY2026 DESE trends workbook]({{ '/assets/data/chapter70/raw/dese_chapter70_key_factors_fy2026_updated_2025-10.xlsx' | relative_url }})
+- [Download district aid CSV]({{ '/assets/data/chapter70/districtaid.csv' | relative_url }})
+- [Download district wealth CSV]({{ '/assets/data/chapter70/districtwealth.csv' | relative_url }})
+- [Read the source and transformation notes](https://github.com/rvchamb/citizenstats.github.io/blob/master/assets/data/chapter70/README.md)
+- [DESE Chapter 70 program page](https://www.doe.mass.edu/finance/chapter70/default.html)
+- [DESE current Trends in Aid and Local Contribution workbook](https://www.doe.mass.edu/finance/chapter70/keyfactors.xlsx)
+
+These are independently prepared extracts from DESE supporting worksheets, not direct DESE CSV downloads. The dbt development repository remains private while its starter documentation is replaced, tests are added, and the public release is reviewed for reproducibility and credential safety.
+
+## Research sequence
+
+The work is intentionally staged:
+
+1. **Chapter 70 baseline** — validate aid, foundation budget, enrollment, required local contribution, and statewide aggregation.
+2. **Wealth and local contribution** — extend into the workbook’s detailed `dataContribution` fields to examine how property value, income, combined effort yield, targets, and required contributions influence—or cease to influence—actual funding outcomes.
+3. **Special education assumptions** — document the assumed enrollment percentages, foundation-budget formulas, and reimbursement mechanisms, then compare formula assumptions with reported district experience.
+4. **Additional DESE sources** — add Pink Sheet and related state datasets as separately sourced, tested models rather than blending them into the baseline without provenance.
 
 ## Next milestones
 
