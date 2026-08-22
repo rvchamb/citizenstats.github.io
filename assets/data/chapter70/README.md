@@ -17,10 +17,11 @@ The workbook used for the current extracts identifies itself as:
 - **Title:** FY26 Foundation Budget Per Pupil
 - **Updated:** October 2025
 - **Workbook:** `dese_chapter70_key_factors_fy2026_updated_2025-10.xlsx`
-- **File size:** 5,291,679 bytes
-- **SHA-256:** `95d7f39f1317b1b2e77c3ce791800eaf7cf334b722767f8655d6a26c2fbc8d89`
+- **Archived download:** [dese_chapter70_key_factors_fy2026_updated_2025-10.xlsx](./raw/dese_chapter70_key_factors_fy2026_updated_2025-10.xlsx)
+- **File size:** 4,597,493 bytes
+- **SHA-256:** `9fdc7d0a6131c82a400509f336f2ac88539e05b2dde1b019232757e668bc2e6f`
 
-The archived workbook is retained byte-for-byte for reproducibility. DESE remains the authoritative source; consult the official link above for the latest version.
+The archived workbook is the untouched file downloaded from DESE’s stable `keyfactors.xlsx` URL on August 22, 2026. Its internal notes identify the FY2026 data update as October 2025. DESE remains the authoritative source; consult the official link above for the latest version. The supporting worksheets are hidden in the DESE original but can be read programmatically without altering the archived file.
 
 ## Published extracts
 
