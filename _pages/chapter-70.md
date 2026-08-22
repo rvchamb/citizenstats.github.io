@@ -70,12 +70,14 @@ The Power BI report currently explores total Chapter 70 aid, aid per pupil, and 
 
 ## Source files and reproducibility
 
-The current comparison extracts are publicly available:
+The archived source and current comparison extracts are publicly available:
 
+- [Download the archived FY2026 DESE trends workbook]({{ '/assets/data/chapter70/raw/dese_chapter70_key_factors_fy2026_updated_2025-10.xlsx' | relative_url }})
 - [Download district aid CSV]({{ '/assets/data/chapter70/districtaid.csv' | relative_url }})
 - [Download district wealth CSV]({{ '/assets/data/chapter70/districtwealth.csv' | relative_url }})
 - [Read the source and transformation notes](https://github.com/rvchamb/citizenstats.github.io/blob/master/assets/data/chapter70/README.md)
-- [DESE Chapter 70 program page](https://www.doe.mass.edu/finance/chapter70/)
+- [DESE Chapter 70 program page](https://www.doe.mass.edu/finance/chapter70/default.html)
+- [DESE current Trends in Aid and Local Contribution workbook](https://www.doe.mass.edu/finance/chapter70/keyfactors.xlsx)
 
 These are independently prepared extracts from DESE supporting worksheets, not direct DESE CSV downloads. The dbt development repository remains private while its starter documentation is replaced, tests are added, and the public release is reviewed for reproducibility and credential safety.
 
